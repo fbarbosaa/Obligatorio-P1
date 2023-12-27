@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> No Te Preocupes </title>
+	<script type="text/javascript" src="dominio/cliente.js" ></script>
+	<link rel="StyleSheet" type="text/css" href="css/estilo.css" >
+</head>
+<body>
+<center> 
+<form>
+<fieldset style="width:550px" >
+<legend align="center"> Cartera de Clientes </legend>
+	<table> 
+	<tr><td colspan="2" align="center"></td></tr>
+	<tr><td>Id </td><td> <input type="text" id="id" onKeyPress="return soloNumeros(event)" /></td></tr>
+	<tr><td>Nombre </td><td> <input type="text" id="nombre" /></td></tr>
+	<tr><td>Direccion</td><td> <input type="text" id="direccion" /></td></tr>
+	<tr><td>Poliza</td><td> <input type="radio" name="poliza" id="propiedad" checked="checked"> Propiedades 
+							<input type="radio" name="poliza" id="automotores" checked="checked"> Automotores 
+							<input type="radio" name="poliza" id="vida" checked="checked"> Vida 
+							</td></tr>
+	<tr><td>Monto</td><td> <input type="text" id="monto" onKeyPress="return soloNumeros(event)"></td></tr>
+	<tr><td>Fecha Vencimiento </td><td> <input type="date" id="venc" ></td></tr>
+	
+	<tr><td colspan="2" align="center">
+		<input type="button" value="alta" onclick="alta()" />
+		<input type="button" value="baja" onclick="baja()" />
+		<input type="button" value="modificar" onclick="modificar()" />
+		<input type="reset" value="limpiar" />
+		
+		
+		 
+	</td></tr>
+	<tr><td colspan="2" align="center"> 
+		<select id="lista" size="8" onclick="seleccionarCliente()" ></select>
+	</td></tr>
+	<tr><td colspan="2" align="center">
+		<input type="button" value="Mostrar Poliza" onclick="mostrarpoliza()" />
+		<input type="button" value="Buscar Cliente" onclick="buscarcliente()" />
+		<input type="button" value="Cambiar Fecha" onclick="cambiar()" />
+		<input type="button" value="Mayor Monto" onclick="mayormonto()" />
+		<input type="button" value="Cantidad de Compra" onclick="cantidad()" />
+		<input type="button" value="Polizas Vencidas" onclick="vencidos()" />
+	</td></tr>	
+
+</table>
+</fieldset>
+</form>
+</center> 
+</body>
+</html>
